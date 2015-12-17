@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7473be60-cbed-4a84-bb63-12f012fa841c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:31838/ServiceCloud.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceCloud.xsd" MetadataType="Schema" ID="d86eb99a-cd15-4311-8c94-a822a8edf935" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceCloud.wsdl" MetadataType="Wsdl" ID="4c8edacf-66ce-40f3-86d6-b7c2d5a65031" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?wsdl" />
+    <MetadataFile FileName="ServiceCloud1.xsd" MetadataType="Schema" ID="4b06068f-5bef-4f72-8be1-a375caf544c7" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceCloud.disco" MetadataType="Disco" ID="5429e844-c4ec-4090-b435-7666697608d0" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?disco" />
+    <MetadataFile FileName="ServiceCloud2.xsd" MetadataType="Schema" ID="dcbf1079-d745-4694-8f57-a36048e12e47" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceCloud4.xsd" MetadataType="Schema" ID="c60a3589-5885-421e-9b08-47d8e8db9d77" SourceId="1" SourceUrl="http://localhost:31838/ServiceCloud.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceCloud" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:31838/ServiceCloud.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:31838/ServiceCloud.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:31838/ServiceCloud.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceCloud" />
+      <xsd:import schemaLocation="http://localhost:31838/ServiceCloud.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceCloud_CreateDirectoryStruct_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDirectoryStruct" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_CreateDirectoryStruct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDirectoryStructResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_GetContainerUri_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerUri" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_GetContainerUri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_GetDirectories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectories" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_GetDirectories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_ListFilesInDir_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListFilesInDir" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_ListFilesInDir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListFilesInDirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_uploadFileInBlob_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadFileInBlob" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_uploadFileInBlob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadFileInBlobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_uploadFileFromStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadFileFromStream" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_uploadFileFromStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadFileFromStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_DownloadBlobAsStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadBlobAsStream" />
+  </wsdl:message>
+  <wsdl:message name="IServiceCloud_DownloadBlobAsStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadBlobAsStreamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceCloud">
+    <wsdl:operation name="CreateDirectoryStruct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/CreateDirectoryStruct" message="tns:IServiceCloud_CreateDirectoryStruct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/CreateDirectoryStructResponse" message="tns:IServiceCloud_CreateDirectoryStruct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerUri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/GetContainerUri" message="tns:IServiceCloud_GetContainerUri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/GetContainerUriResponse" message="tns:IServiceCloud_GetContainerUri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/GetDirectories" message="tns:IServiceCloud_GetDirectories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/GetDirectoriesResponse" message="tns:IServiceCloud_GetDirectories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFilesInDir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/ListFilesInDir" message="tns:IServiceCloud_ListFilesInDir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/ListFilesInDirResponse" message="tns:IServiceCloud_ListFilesInDir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileInBlob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/uploadFileInBlob" message="tns:IServiceCloud_uploadFileInBlob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/uploadFileInBlobResponse" message="tns:IServiceCloud_uploadFileInBlob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileFromStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/uploadFileFromStream" message="tns:IServiceCloud_uploadFileFromStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/uploadFileFromStreamResponse" message="tns:IServiceCloud_uploadFileFromStream_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadBlobAsStream">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceCloud/DownloadBlobAsStream" message="tns:IServiceCloud_DownloadBlobAsStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceCloud/DownloadBlobAsStreamResponse" message="tns:IServiceCloud_DownloadBlobAsStream_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceCloud" type="tns:IServiceCloud">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateDirectoryStruct">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/CreateDirectoryStruct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerUri">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/GetContainerUri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectories">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/GetDirectories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFilesInDir">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/ListFilesInDir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileInBlob">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/uploadFileInBlob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileFromStream">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/uploadFileFromStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadBlobAsStream">
+      <soap:operation soapAction="http://tempuri.org/IServiceCloud/DownloadBlobAsStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceCloud">
+    <wsdl:port name="BasicHttpBinding_IServiceCloud" binding="tns:BasicHttpBinding_IServiceCloud">
+      <soap:address location="http://localhost:31838/ServiceCloud.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
